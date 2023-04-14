@@ -1,80 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-<style>
-	tbody {vertical-align: top}
-	</style>
-  <meta charset="UTF-8">
-	.hover:after
-{content: attr(data-title);
-display: none;position: absolute;
-bottom: 130%;
-left: 0px;
-background-color: #fff;
-color: #3aaeda;
-padding: 5px;
-text-align: center;
--moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
--webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
-box-shadow: 0 1px 1px rgba(0,0,0,.16);font-size: 12px;}
-/* Добавляем свойство, чтобы при наведении на элемент плашка с подсказкой появилась */
-.hover:hover:after{display: block;}
-/* задаем относительное позиционирование контейнеру */
-.block{position:relative;}
-/* Оформление скрытого элемента по умолчанию */ 
-.hidden
-{display: none;
-position: absolute;
-bottom: 130%;
-left: 0px;
-background-color: #fff;
-color: #3aaeda;
-padding: 5px;
-text-align: center;
--moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
--webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
-box-shadow: 0 1px 1px rgba(0,0,0,.16);
-font-size: 12px;}
-/* Дополнительное оформление скрытого элемента(необязательно) */
-.hover + .hidden:before
-{content: " ";
-position: absolute;
-top: 98%;
-left: 10%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-height: 0;
-width: 0;
-border: 7px solid transparent;
-border-right: 7px solid #fff;
-border-color: #fff transparent transparent transparent;
-z-index: 2;}
-/* Дополнительное оформление скрытого элемента(необязательно) */
-.hover + .hidden:after
-{content: " ";
-position: absolute;
-top: 100%;
-left: 10%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-height: 0;
-width: 0;
-border: 7px solid transparent;
-border-right: 7px solid #fff;
-border-color: rgba(0,0,0,.16) transparent transparent transparent;
-z-index: 1;}
-/* Появление скрытого элемента при наведении */
-.hover:hover + .hidden{display: block;}
-  <title>Навигация</title>
-</head>
-<body>
-	
-<div data-title="такую подсказку можно оформить" class="hover">?</div>
-<div class="block"> <!-- контейнер -->
- <div class="hover">?</div> <!-- видимый элемент -->
- <span class="hidden">это подсказка с оформлением</span> <!-- скрытый элемент -->
- </div>
-</body>
+<html>
+	<head>
+		<title>Всплывающие подсказки</title>
+
+		<meta charset="utf-8" />
+		<link href="style.less" rel="stylesheet/less" type="text/css" />
+        <script type="text/javascript" src="js/less.lib.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+	</head>
+	<body>
+		<a href="#" >Ссылка</a>
+		
+		<div id="tooltip"></div>
+	</body>
 </html>
